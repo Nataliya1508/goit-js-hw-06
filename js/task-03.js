@@ -1,3 +1,4 @@
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +13,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const galleryItem = ({ url, alt }) => `<li><img class = "picture" src="${url}" alt="${alt}"></li>`;
+
+const galleryMarkup = images.reduce((acc, item) => acc + galleryItem(item), "");
+const galleryList = document.querySelector(".gallery");
+galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
+galleryList.setAttribute("style", "list-style-type:none;");
+
+
+
+
