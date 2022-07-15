@@ -8,8 +8,6 @@ let outputEl = document.querySelector("#name-output");
 inputEl.addEventListener("input", onInputChange);
 
 
-
-
 function onInputChange(event) {
   inputEl = event.currentTarget.value;
   console.log(inputEl);

@@ -15,8 +15,8 @@ function onLoginForm(event) {
     console.log(formData);
     form.reset();
 
-    if (email.value === " " || formData.value === " ") {
-        alert('Все поля должны быть заполнены')
+    if (email === " " || password === " ") {
+      alert('Все поля должны быть заполнены')
        
     }
 
