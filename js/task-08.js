@@ -12,12 +12,15 @@ function onLoginForm(event) {
         email: email.value,
         password: password.value,
     }
+    
     console.log(formData);
     form.reset();
 
-    if (email === " " || password === " ") {
-      alert('Все поля должны быть заполнены')
-       
+    if (email === "" || password === "") {
+        alert('Все поля должны быть заполнены');
+        form.reset();
+       return
     }
-
+  
 }
+
